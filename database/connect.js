@@ -8,7 +8,7 @@ import fs from "fs";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-var dir = "./data";
+var dir = "data";
 
 if (!fs.existsSync(dir)) {
   fs.mkdirSync(dir);
@@ -17,7 +17,7 @@ if (!fs.existsSync(dir)) {
 export default async function connect() {
   const mongoServer = await MongoMemoryServer.create({
     instance: {
-      dbPath: path.join(`${__dirname}`, "/data"), // by default create in temp directory, we are storing in data directory
+      dbPath: path.join(`${__dirname}`, "../data"), // by default create in temp directory, we are storing in data directory
       storageEngine: "wiredTiger",
       // replSet: "testset", //this is default name we can change in by proving new name while initialize replset
     },
