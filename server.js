@@ -3,10 +3,12 @@ import connect from "./database/connect.js";
 import userModel from "./model/user.model.js";
 const app = express();
 
+//middleware to send json
 app.use(express.json());
 
 const port = 8080;
 
+//find the name
 app.get("/", (req, res) => {
   try {
     userModel
@@ -22,6 +24,7 @@ app.get("/", (req, res) => {
   }
 });
 
+//adding name
 app.post("/add", (req, res) => {
   try {
     const user = new userModel({
