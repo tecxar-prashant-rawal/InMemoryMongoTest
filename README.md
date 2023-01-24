@@ -19,7 +19,10 @@ Redis->Manual fail-over required if you need to promote a replica in another dat
 
 ## Advantages of Redis
 
-Despite being an in-memory store, Redis persists data on disk to ensure data durability. If the Redis process crashes and restarts, it can restore the data from the disk.
+> MongoDB supports an in-memory storage engine as part of MongoDB Enterprise. The in-memory storage engine combines the predictable latency benefits of the in-memory storage model with the rich query capabilities of MongoDB.
+
+> (MongoDB)The in-memory storage engine doesn’t write data to persistent storage. To ensure data durability, you can deploy replica sets that use a combination of the in-memory storage engine and the default persistent storage engine. In case of a crash and restart, the nodes using the in-memory storage engine can sync from the nodes using persistent storage.
+
 
 ## Our Application(clearDu)
 
