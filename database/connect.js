@@ -3,10 +3,16 @@ import mongoose from "mongoose";
 import { MongoMemoryReplSet } from "mongodb-memory-server";
 import path from "path";
 import { fileURLToPath } from "url";
-
+import fs from "fs";
 //dirname is not available in es6 so found workaround
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
+var dir = "./data";
+
+if (!fs.existsSync(dir)) {
+  fs.mkdirSync(dir);
+}
 
 export default async function connect() {
   const mongoServer = await MongoMemoryServer.create({
