@@ -44,7 +44,7 @@ Other options which can be used
 - IBM DB2
 - Kafka -> especially for storing large amount of data for longer period of time
 
-# InMemoryMongoTest
+# InMemoryMongoPrototype
 
 ## Steps to start this prototype
 
