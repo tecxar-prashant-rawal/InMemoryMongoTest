@@ -38,8 +38,8 @@ We are only storing session for users and fetch agent data on web-hooks.
 
 Other options which can be used
 
+- MongoDB -> Made a prototype too
 - Memcached -> but there are some drawbacks
-- MongoDB -> made a prototype too
 - Azure cosmos db
 - IBM DB2
 - Kafka -> especially for storing large amount of data for longer period of time
