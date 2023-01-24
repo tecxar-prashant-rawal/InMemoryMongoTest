@@ -43,6 +43,7 @@ app.post("/add", (req, res) => {
   }
 });
 
+//if connected successfully then only listen to port
 connect()
   .then(() => {
     try {
