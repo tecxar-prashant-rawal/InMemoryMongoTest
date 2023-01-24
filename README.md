@@ -2,7 +2,9 @@
 
 ## Data-model (Big concern)
 
-MongoDB-> Document size is up to 16MB,
+MongoDB-> Per Document size is up to 16MB,
+
+> But By default, the in-memory storage engine uses 50% of physical RAM minus 1 GB.
 
 Redis-> Keys are binary safe strings with length up to 512MB.
 
@@ -18,8 +20,16 @@ MongoDB->Automatic fail-over with replica set elections(In MongoDB)
 Redis->Manual fail-over required if you need to promote a replica in another data center to master.(this is the issue which we are facing)
 
 ## Advantages of Redis
+>Despite being an in-memory store, Redis persists data on disk to ensure data durability. If the Redis process crashes and restarts, it can restore the data from the disk.
 
-Despite being an in-memory store, Redis persists data on disk to ensure data durability. If the Redis process crashes and restarts, it can restore the data from the disk.
+### For mongoDB we have to deploy with replicaSet
+
+> MongoDB supports an in-memory storage engine as part of MongoDB Enterprise. The in-memory storage engine combines the predictable latency benefits of the in-memory storage model with the rich query capabilities of MongoDB.
+
+> (MongoDB)The in-memory storage engine doesn’t write data to persistent storage. To ensure data durability, you can deploy replica sets that use a combination of the in-memory storage engine and the default persistent storage engine. In case of a crash and restart, the nodes using the in-memory storage engine can sync from the nodes using persistent storage.
+
+> With this deployment model, only the mongod instances running with the in-memory storage engine can become the primary. Clients connect only to the in-memory storage engine mongod instances. Even if both mongod instances running in-memory storage engine crash and restart, they can sync from the member running WiredTiger. The hidden mongod instance running with WiredTiger persists the data to disk, including the user data, indexes, and replication configuration information.
+
 
 ## Our Application(clearDu)
 
@@ -45,6 +55,12 @@ Other options which can be used
 - Kafka -> especially for storing large amount of data for longer period of time
 
 # InMemoryMongoPrototype
+
+![alt text](https://webimages.mongodb.com/_com_assets/cms/kt0j5x9w036qcrckg-replica-set-in-memory.png.png?auto=format%252Ccompress)
+
+> On MongoDB Atlas instances using the M40 tier or higher, 50% of the available memory is used for caching. The other 50% is used for in-memory operations and the other services running on the server.
+
+![alt text](https://webimages.mongodb.com/_com_assets/cms/kt0jd5lvn4u1daaq7-wiredtiger-cache.png.png?auto=format%252Ccompress)
 
 ## Steps to start this prototype
 
