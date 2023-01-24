@@ -52,7 +52,7 @@ Other options which can be used
 ## npm i 
 ## npm run dev
 
-### There will be two api get and post , get will get the data from the inMemoryServer in it exist while post will post the data in memory () which can be used to store session, userinfo , otp etc
+> There will be two api get and post , get will get the data from the inMemoryServer in it exist while post will post the data in memory () which can be used to store session, userinfo , otp etc
 
-##If the Database-path is a temporary directory (generated with tmp), then it will automatically get cleaned-up when calling .stop(), this can be disabled with .stop(false).
+> If the Database-path is a temporary directory (generated with tmp), then it will automatically get cleaned-up when calling .stop(), this can be disabled with .stop(false).
 If the Database-path is manually set with dbPath, then it needs to be manually cleaned-up with .cleanup(true)
