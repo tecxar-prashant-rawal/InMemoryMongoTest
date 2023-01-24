@@ -46,6 +46,8 @@ Other options which can be used
 
 # InMemoryMongoPrototype
 
+![alt text](https://webimages.mongodb.com/_com_assets/cms/kt0j5x9w036qcrckg-replica-set-in-memory.png.png?auto=format%252Ccompress)
+
 ## Steps to start this prototype
 
 ### npm i
