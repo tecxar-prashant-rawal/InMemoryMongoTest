@@ -48,6 +48,10 @@ Other options which can be used
 
 ![alt text](https://webimages.mongodb.com/_com_assets/cms/kt0j5x9w036qcrckg-replica-set-in-memory.png.png?auto=format%252Ccompress)
 
+> On MongoDB Atlas instances using the M40 tier or higher, 50% of the available memory is used for caching. The other 50% is used for in-memory operations and the other services running on the server.
+
+![alt text](https://webimages.mongodb.com/_com_assets/cms/kt0jd5lvn4u1daaq7-wiredtiger-cache.png.png?auto=format%252Ccompress)
+
 ## Steps to start this prototype
 
 ### npm i
