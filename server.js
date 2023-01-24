@@ -30,7 +30,7 @@ app.post("/add", (req, res) => {
     user
       .save()
       .then(() => {
-        return res.json({ message: "username added successfully" });
+        return res.json({ message: "username made successfully" });
       })
       .catch((err) => {
         return res.json({ message: "error on adding username" });
