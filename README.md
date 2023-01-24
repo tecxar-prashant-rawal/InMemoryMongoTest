@@ -2,7 +2,9 @@
 
 ## Data-model (Big concern)
 
-MongoDB-> Document size is up to 16MB,
+MongoDB-> Per Document size is up to 16MB,
+
+> But By default, the in-memory storage engine uses 50% of physical RAM minus 1 GB.
 
 Redis-> Keys are binary safe strings with length up to 512MB.
 
