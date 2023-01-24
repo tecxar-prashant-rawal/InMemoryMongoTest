@@ -26,6 +26,8 @@ Redis->Manual fail-over required if you need to promote a replica in another dat
 
 > (MongoDB)The in-memory storage engine doesn’t write data to persistent storage. To ensure data durability, you can deploy replica sets that use a combination of the in-memory storage engine and the default persistent storage engine. In case of a crash and restart, the nodes using the in-memory storage engine can sync from the nodes using persistent storage.
 
+> With this deployment model, only the mongod instances running with the in-memory storage engine can become the primary. Clients connect only to the in-memory storage engine mongod instances. Even if both mongod instances running in-memory storage engine crash and restart, they can sync from the member running WiredTiger. The hidden mongod instance running with WiredTiger persists the data to disk, including the user data, indexes, and replication configuration information.
+
 
 ## Our Application(clearDu)
 
